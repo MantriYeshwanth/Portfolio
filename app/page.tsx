@@ -26,16 +26,6 @@ import {
   Mail,
 } from "lucide-react"
 
-const globalStyles = `
-  * {
-    position: relative;
-    z-index: 1;
-  }
-  .bg-element {
-    z-index: 0;
-  }
-`
-
 export default function Home() {
   const { toast } = useToast()
   const [name, setName] = useState("")
@@ -97,6 +87,35 @@ export default function Home() {
           observer.unobserve(section.current)
         }
       })
+    }
+  }, [])
+
+  // Add custom styles for about section
+  useEffect(() => {
+    // Create a style element
+    const styleEl = document.createElement("style")
+    // Set the content
+    styleEl.textContent = `
+      #about p, #about li {
+        color: white !important;
+      }
+      #about h3 {
+        color: #60a5fa !important; /* text-blue-400 */
+      }
+      * {
+        position: relative;
+        z-index: 1;
+      }
+      .bg-element {
+        z-index: 0;
+      }
+    `
+    // Append to head
+    document.head.appendChild(styleEl)
+
+    // Cleanup
+    return () => {
+      document.head.removeChild(styleEl)
     }
   }, [])
 
@@ -176,9 +195,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col dark relative overflow-hidden">
-      <style jsx global>
-        {globalStyles}
-      </style>
       {/* Custom cursor */}
       <div className="cursor-container fixed top-0 left-0 pointer-events-none z-50 hidden md:block">
         {[...Array(6)].map((_, i) => (
@@ -504,14 +520,6 @@ export default function Home() {
 
         {/* About Section */}
         <section id="about" ref={aboutRef} className="py-20">
-          <style jsx global>{`
-            #about p, #about li {
-              color: white !important;
-            }
-            #about h3 {
-              color: #60a5fa !important; /* text-blue-400 */
-            }
-          `}</style>
           <div className="container mx-auto px-4">
             <motion.div
               className="max-w-3xl mx-auto"
@@ -539,6 +547,58 @@ export default function Home() {
                   and turning ideas into functional applications. I'm particularly interested in web development, data
                   analysis, and building user-friendly interfaces.
                 </motion.p>
+
+                <motion.div className="grid md:grid-cols-2 gap-6 mt-8" variants={fadeInUp}>
+                  <motion.div
+                    className="p-6 rounded-xl bg-black/50 border border-purple-500/20 backdrop-blur-sm hover:bg-black/70 transition-all duration-300"
+                    whileHover={{ y: -5 }}
+                  >
+                    <h3 className="text-xl font-semibold mb-4 text-blue-400">What I Do</h3>
+                    <ul className="space-y-2 text-white">
+                      <li className="flex items-start">
+                        <span className="mr-2 text-blue-400">▹</span>
+                        Full-Stack Web Development
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2 text-blue-400">▹</span>
+                        Problem Solving & Algorithms
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2 text-blue-400">▹</span>
+                        Responsive UI Design
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2 text-blue-400">▹</span>
+                        Database Management
+                      </li>
+                    </ul>
+                  </motion.div>
+
+                  <motion.div
+                    className="p-6 rounded-xl bg-black/50 border border-purple-500/20 backdrop-blur-sm hover:bg-black/70 transition-all duration-300"
+                    whileHover={{ y: -5 }}
+                  >
+                    <h3 className="text-xl font-semibold mb-4 text-blue-400">Personal Traits</h3>
+                    <ul className="space-y-2 text-white">
+                      <li className="flex items-start">
+                        <span className="mr-2 text-blue-400">▹</span>
+                        Analytical Thinker
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2 text-blue-400">▹</span>
+                        Quick Learner
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2 text-blue-400">▹</span>
+                        Team Collaborator
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2 text-blue-400">▹</span>
+                        Detail-Oriented
+                      </li>
+                    </ul>
+                  </motion.div>
+                </motion.div>
               </motion.div>
             </motion.div>
           </div>
@@ -1052,7 +1112,7 @@ export default function Home() {
               transition={{ delay: 0.7 }}
             >
               <a
-                href="https://www.linkedin.com/in/mantri-yeshwanth-167623287"
+                href="https://www.linkedin.com/in/mantri-yeshwanth"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-blue-400 transition-colors"

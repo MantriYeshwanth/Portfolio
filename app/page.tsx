@@ -326,7 +326,7 @@ export default function Home() {
                   size="sm"
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-full"
                 >
-                  <a href="/resume.pdf" download>
+                  <a href="/Yeshwanth_Mantri_Resume.pdf" download>
                     <Download className="mr-2 h-4 w-4" />
                     Resume
                   </a>
@@ -680,13 +680,21 @@ export default function Home() {
 
               <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" variants={staggerContainer}>
                 {[
+                    {
+                    title: "Sashakt",
+                    description:
+                      "An interactive web application for children to learn essential child rights through engaging games.",
+                    tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
+                    image: "/images/sashakt.jpg",
+                    link: "https://sashakt-five.vercel.app/",
+                  },
                   {
                     title: "Review Bot",
                     description:
                       "A web app that analyzes product reviews, generates pros and cons, and includes a chatbot to assist with review-related queries.",
                     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Vite"],
                     image: "/images/reviewBot.jpg",
-                    link: "#",
+                    link: "https://github.com/MantriYeshwanth/reviewbot_front",
                   },
                   {
                     title: "RecipeRealm",
@@ -694,16 +702,9 @@ export default function Home() {
                       "A recipe recommendation app that suggests recipes based on user-input ingredients using web scraping and LLM.",
                     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Web Scraping", "LLM"],
                     image: "/images/recipeRealm.webp",
-                    link: "#",
+                    link: "https://github.com/MantriYeshwanth/recipeRealm",
                   },
-                  {
-                    title: "Sashakt",
-                    description:
-                      "An interactive web application for children to learn essential child rights through engaging games.",
-                    tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
-                    image: "/images/sashakt.jpg",
-                    link: "#",
-                  },
+               ,
                 ].map((project, index) => (
                   <motion.div
                     key={index}
@@ -767,7 +768,7 @@ export default function Home() {
                     className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-full"
                   >
                     <a
-                      href="https://github.com/MantriYeshwanth"
+                      href="https://github.com/MantriYeshwanth?tab=repositories"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-white font-medium"

@@ -691,7 +691,7 @@ export default function Home() {
                   {
                     title: "Review Bot",
                     description:
-                      "A web app that analyzes product reviews, generates pros and cons, and includes a chatbot to assist with review-related queries.",
+                      "A web app that analyzes product reviews, generates pros and cons and includes a chatbot to assist with review-related queries.",
                     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Vite"],
                     image: "/images/reviewBot.jpg",
                     link: "https://github.com/MantriYeshwanth/reviewbot_front",

@@ -326,7 +326,7 @@ export default function Home() {
                   size="sm"
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-full"
                 >
-                  <a href="/Yeshwanth_Mantri_Resume.pdf" download>
+                  <a href="https://drive.google.com/file/d/1C_Xxpc93tIIThBL3YG6vO1oVvVsWQZN1/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                     <Download className="mr-2 h-4 w-4" />
                     Resume
                   </a>
@@ -368,7 +368,7 @@ export default function Home() {
                   </motion.button>
                 ))}
                 <Button asChild size="sm" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full">
-                  <a href="/resume.pdf" download>
+                  <a href="https://drive.google.com/file/d/1C_Xxpc93tIIThBL3YG6vO1oVvVsWQZN1/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                     <Download className="mr-2 h-4 w-4" />
                     Resume
                   </a>
@@ -505,7 +505,7 @@ export default function Home() {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/30 to-purple-600/30 blur-xl opacity-30 animate-pulse -z-10" />
                 <div className="relative w-full h-full overflow-hidden rounded-full border-2 border-purple-500/30 shadow-2xl shadow-purple-500/20">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tankbund-z5dzmKbgWCEs7ycg0RxZw1KL4DlHN3.jpeg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LinkedIn-0Xka1TAZ05PGSUOIQ5gKoDh3pvPDyM.jpg"
                     alt="Yeshwanth Mantri"
                     fill
                     className="object-cover object-center"
@@ -815,7 +815,7 @@ export default function Home() {
                       <span className="text-gray-400">2022 - 2026</span>
                     </div>
                     <p className="text-white">B.Tech. - Information Technology</p>
-                    <p className="text-gray-400 mt-1">CGPA: 8.81</p>
+                    <p className="text-gray-400 mt-1">CGPA: 8.6</p>
                   </div>
                 </motion.div>
 
